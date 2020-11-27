@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>心农网</title>
+		<link rel="stylesheet" type="text/css" href="css/test.css"/>
+		<script type="text/javascript" src="js/test.js"></script>
+		<script type="text/javascript" src="js/banner.js" ></script>
+	</head>
+	<body>
+		<div id="head">
+			<div id="headContent">
+				<a href="htmls/about.html"><div class="headNumLeft" id="logo"></div>
+					<div class="headNumLeft" id="head1">
+						<p style="position: relative;top: 30%;">建站初衷</p>
+					</div>
+				</a>
+				<a href="img/wysjds.png" target=“_blank“>
+					<div class="headNumRight" id="head2">
+						<p style="position: relative;top: 30%;">网页设计</p>
+					</div>
+				</a>
+				<a href="img/bjwl.jpg" target=“_blank“>
+					<div class="headNumRight" id="head3">
+						<p style="position: relative;top: 30%;">宝鸡文理</p>
+					</div>
+				</a>
+				<a href="img/jsjxy.jpg" target=“_blank“>
+					<div class="headNumRight" id="head4">
+						<p style="position: relative;top: 30%;">宝大计算机</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div id="content">
+			<div id="texture">
+				<ul id="banner"></ul>
+			</div>
+			<div id="text">
+				<ul id="web">
+					<li class="webText"><a href="http://nmfsj.moa.gov.cn/dfzt/gs/zxzx_25835/202009/t20200928_6353415.htm" target="_blank">[甘肃] 天祝举行“庆丰收·迎小康”活动</a></li>
+					<li class="webText"><a href="http://nmfsj.moa.gov.cn/dfzt/jilin/zxzx_25804/202009/t20200928_6353412.htm" target="_blank">瀚海大地庆丰收，稻香满溢迎宾朋 吉林白城2020年中国农民丰收节纪实</a></li></li>
+					<li class="webText"><a href="http://nmfsj.moa.gov.cn/dfzt/shanghai/zxzx_25783/202009/t20200928_6353409.htm" target="_blank">“红芒绿种”彩稻惊艳再现，金山区“农民丰收节”暨亭林镇“五彩稻田节”开幕</a></li>
+					<li class="webText"><a href="http://nmfsj.moa.gov.cn/dfzt/gs/zxzx_25835/202009/t20200928_6353369.htm" target="_blank">两当：“农民丰收节”硕果累累 共享丰收喜悦</a></li>
+					<li class="webText"><a href="http://nmfsj.moa.gov.cn/dfzt/guangdong/zxzx_25835/202009/t20200927_6353324.htm" target="_blank">广州市黄埔区：匠心打造都市田园新空间</a></li>
+					<li class="webText"><a href="http://nmfsj.moa.gov.cn/dfzt/beijingfsj/zxzx_25760/202009/t20200927_6353311.htm" target="_blank">红薯、菊花、大桃 平谷特色农产品齐聚庆丰收节</a></li>
+				</ul>
+			</div>
+			<div id="box">
+				<div id="images">
+					<div id="leftImg"></div>
+					<div id="boxx">
+						<a href="./htmls/head4.html" target=“_blank“><div class="boxxxxx" id="box1"></div></a>
+						<a href="./htmls/head6.html" target=“_blank“><div class="boxxxxx" id="box3"></div></a>
+						<a href="./htmls/head1.html" target=“_blank“><div class="boxxxxx" id="box5"></div></a>
+						<a href="./htmls/head9.html" target=“_blank“><div class="boxxxxx" id="box7"></div></a>
+					</div>
+					<div id="boxz">
+						<a href="./htmls/head2.html" target=“_blank“><div class="boxxxxz" id="box2"></div></a>
+						<a href="./htmls/head5.html" target=“_blank“><div class="boxxxxz" id="box4"></div></a>
+						<a href="./htmls/head3.html" target=“_blank“><div class="boxxxxz" id="box6"></div></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	document.getElementById("leftImg").onclick = function(){
+	document.getElementById("box").style.left = 0+"px";
+	document.getElementById("texture").style.opacity = 0;
+	document.getElementById("text").style.opacity = 0;
+	document.getElementById("texture").style.left = -800 + "px";
+	document.getElementById("text").style.top = 800 + "px";
+	document.getElementById("leftImg").style.transform = "rotate(180deg)";
+	document.getElementById("leftImg").style.transition = "0.6s";
+	}
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>丰收节 收获季</title>
+		<link rel="stylesheet" type="text/css" href="../css/test.css"/>
+		<script type="text/javascript" src="../js/head1.js"></script>
+	</head>
+	<body>
+		<div id="head">
+			<div id="headContent">
+				<a href="../htmls/about.html"><div class="headNumLeft" id="logo"></div>
+					<div class="headNumLeft" id="head1">
+						<p style="position: relative;top: 30%;">建站初衷</p>
+					</div>
+				</a>
+				<a href="../img/wysjds.png" target=“_blank“>
+					<div class="headNumRight" id="head2">
+						<p style="position: relative;top: 30%;">网页设计</p>
+					</div>
+				</a>
+				<a href="../img/bjwl.jpg" target=“_blank“>
+					<div class="headNumRight" id="head3">
+						<p style="position: relative;top: 30%;">宝鸡文理</p>
+					</div>
+				</a>
+				<a href="../img/jsjxy.jpg" target=“_blank“>
+					<div class="headNumRight" id="head4">
+						<p style="position: relative;top: 30%;">宝大计算机</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div id="content">
+			<div id = "imgContent" style="text-align: center;">
+				<p id="title">丰收节 收获季</p>
+				<img class="imgTitle" src="../img/head81.jpg"/>
+			</div>
+			<div id="box">
+				<div id="images">
+					<div id="leftImg"></div>
+					<p id="headText">金秋时节，各地农民迎来收获季，欢庆“中国农民丰收节”的到来。</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	document.getElementById("leftImg").onclick = function(){
+		document.getElementById("imgContent").style.opacity = 0;
+		document.getElementById("imgContent").style.left = -800 + "px";
+		document.getElementById("box").style.left = 0+"px";
+		document.getElementById("leftImg").style.transform = "rotate(180deg)";
+		document.getElementById("leftImg").style.transition = "0.6s";
+	}
+</script>

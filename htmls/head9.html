@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>瞰丰收——赣抚平原迎丰收</title>
+		<link rel="stylesheet" type="text/css" href="../css/test.css"/>
+		<script type="text/javascript" src="../js/head1.js"></script>
+	</head>
+	<body>
+		<div id="head">
+			<div id="headContent">
+				<a href="../htmls/about.html"><div class="headNumLeft" id="logo"></div>
+					<div class="headNumLeft" id="head1">
+						<p style="position: relative;top: 30%;">建站初衷</p>
+					</div>
+				</a>
+				<a href="../img/wysjds.png" target=“_blank“>
+					<div class="headNumRight" id="head2">
+						<p style="position: relative;top: 30%;">网页设计</p>
+					</div>
+				</a>
+				<a href="../img/bjwl.jpg" target=“_blank“>
+					<div class="headNumRight" id="head3">
+						<p style="position: relative;top: 30%;">宝鸡文理</p>
+					</div>
+				</a>
+				<a href="../img/jsjxy.jpg" target=“_blank“>
+					<div class="headNumRight" id="head4">
+						<p style="position: relative;top: 30%;">宝大计算机</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div id="content">
+			<div id = "imgContent" style="text-align: center;">
+				<p id="title">瞰丰收——赣抚平原迎丰收</p>
+				<img class="imgTitle" src="../img/head91.jpg"/>
+			</div>
+			<div id="box">
+				<div id="images">
+					<div id="leftImg"></div>
+					<p id="headText">　　近日，赣抚平原灌区江西南昌县96.2万亩晚稻陆续开镰。该县通过开展水稻绿色高效生产技术培训，精准指导农户抓好田间管理，晚稻丰收在望。
+
+</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	document.getElementById("leftImg").onclick = function(){
+		document.getElementById("imgContent").style.opacity = 0;
+		document.getElementById("imgContent").style.left = -800 + "px";
+		document.getElementById("box").style.left = 0+"px";
+		document.getElementById("leftImg").style.transform = "rotate(180deg)";
+		document.getElementById("leftImg").style.transition = "0.6s";
+	}
+</script>

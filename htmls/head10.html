@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>瞰丰收——“北大荒”秋收忙</title>
+		<link rel="stylesheet" type="text/css" href="../css/test.css"/>
+		<script type="text/javascript" src="../js/head1.js"></script>
+	</head>
+	<body>
+		<div id="head">
+			<div id="headContent">
+				<a href="../htmls/about.html"><div class="headNumLeft" id="logo"></div>
+					<div class="headNumLeft" id="head1">
+						<p style="position: relative;top: 30%;">建站初衷</p>
+					</div>
+				</a>
+				<a href="../img/wysjds.png" target=“_blank“>
+					<div class="headNumRight" id="head2">
+						<p style="position: relative;top: 30%;">网页设计</p>
+					</div>
+				</a>
+				<a href="../img/bjwl.jpg" target=“_blank“>
+					<div class="headNumRight" id="head3">
+						<p style="position: relative;top: 30%;">宝鸡文理</p>
+					</div>
+				</a>
+				<a href="../img/jsjxy.jpg" target=“_blank“>
+					<div class="headNumRight" id="head4">
+						<p style="position: relative;top: 30%;">宝大计算机</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div id="content">
+			<div id = "imgContent" style="text-align: center;">
+				<p id="title">瞰丰收——“北大荒”秋收忙</p>
+				<img class="imgTitle" src="../img/head101.jpg"/>
+				<img class="imgTitle" src="../img/head102.jpg"/>
+			</div>
+			<div id="box">
+				<div id="images">
+					<div id="leftImg"></div>
+					<p id="headText">10月12日，在黑龙江农垦建三江管理局勤得利农场，种植户驾驶机械整地翻田（无人机拍摄）。
+
+10月12日，在黑龙江农垦建三江管理局勤得利农场，种植户驾驶机械抢收水稻（无人机拍摄）。
+
+10月12日，在黑龙江农垦建三江管理局勤得利农场，种植户驾驶机械在稻田作业（无人机拍摄）。
+
+　　金秋十月，黑龙江农垦建三江管理局勤得利农场一派秋收景象，农机穿梭在田间，抢收水稻，整地翻田。
+
+</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	document.getElementById("leftImg").onclick = function(){
+		document.getElementById("imgContent").style.opacity = 0;
+		document.getElementById("imgContent").style.left = -800 + "px";
+		document.getElementById("box").style.left = 0+"px";
+		document.getElementById("leftImg").style.transform = "rotate(180deg)";
+		document.getElementById("leftImg").style.transition = "0.6s";
+	}
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>乡村“水上农场”迎丰收</title>
+		<link rel="stylesheet" type="text/css" href="../css/test.css"/>
+		<script type="text/javascript" src="../js/head1.js"></script>
+	</head>
+	<body>
+		<div id="head">
+			<div id="headContent">
+				<a href="../htmls/about.html"><div class="headNumLeft" id="logo"></div>
+					<div class="headNumLeft" id="head1">
+						<p style="position: relative;top: 30%;">建站初衷</p>
+					</div>
+				</a>
+				<a href="../img/wysjds.png" target=“_blank“>
+					<div class="headNumRight" id="head2">
+						<p style="position: relative;top: 30%;">网页设计</p>
+					</div>
+				</a>
+				<a href="../img/bjwl.jpg" target=“_blank“>
+					<div class="headNumRight" id="head3">
+						<p style="position: relative;top: 30%;">宝鸡文理</p>
+					</div>
+				</a>
+				<a href="../img/jsjxy.jpg" target=“_blank“>
+					<div class="headNumRight" id="head4">
+						<p style="position: relative;top: 30%;">宝大计算机</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div id="content">
+			<div id = "imgContent" style="text-align: center;">
+				<p id="title">乡村“水上农场”迎丰收</p>
+				<img class="imgTitle" src="../img/head71.jpg"/>
+				<img class="imgTitle" src="../img/head72.jpg" />
+			</div>
+			<div id="box">
+				<div id="images">
+					<div id="leftImg"></div>
+					<p id="headText">当日，浙江省湖州市东林镇东升村的河道水面栽培的水稻开始收割。当地今年首次采用“水上稻”栽培技术，通过将水稻种植在特制的浮床上，使水稻根系生长于乡村河道水域中，增加水稻播种面积和粮食产量，并带动立体水产养殖业发展。与此同时，水上种稻还能改善生态环境、减少水体污染、节约土地资源。预计今年东林镇东升村“水上稻”亩产可达1000斤，而且因为属于生态种植，产出的稻米价格也要高于普通水稻，每亩“水上稻”产值可达10000元左右。</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	document.getElementById("leftImg").onclick = function(){
+		document.getElementById("imgContent").style.opacity = 0;
+		document.getElementById("imgContent").style.left = -800 + "px";
+		document.getElementById("box").style.left = 0+"px";
+		document.getElementById("leftImg").style.transform = "rotate(180deg)";
+		document.getElementById("leftImg").style.transition = "0.6s";
+	}
+</script>
