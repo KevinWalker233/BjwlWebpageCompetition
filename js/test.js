@@ -1,4 +1,4 @@
-window.onload = function(){
+window.onload = function(){//设置头部和内部盒子的宽度
 	document.getElementById("head").style.height = document.documentElement.clientHeight*0.1+"px";
 	document.getElementById("content").style.height = document.documentElement.clientHeight*0.9+"px";
 }
@@ -23,6 +23,8 @@ var scrollFunc = function(e){//当滚动条上下滚动时计算滚动量
 					document.getElementById("text").style.top = 430 + "px";
 					document.getElementById("leftImg").style.transform = "rotate(360deg)";
 					document.getElementById("leftImg").style.transition = "0.6s";
+					document.getElementById("boxz").style.top = "500px";
+					document.getElementById("boxx").style.top = "-500px";
 				}
         }
         if (e.wheelDelta < 0) { //当滑轮向下滚动时
@@ -36,6 +38,8 @@ var scrollFunc = function(e){//当滚动条上下滚动时计算滚动量
 			document.getElementById("text").style.top = 800 + "px";
 			document.getElementById("leftImg").style.transform = "rotate(180deg)";
 			document.getElementById("leftImg").style.transition = "0.6s";
+			document.getElementById("boxz").style.top = "0px";
+			document.getElementById("boxx").style.top = "10px";
         }
 	}else if (e.detail) {  //Firefox滑轮事件
         if (e.detail > 0) { //当滑轮向上滚动时
@@ -52,6 +56,8 @@ var scrollFunc = function(e){//当滚动条上下滚动时计算滚动量
 				document.getElementById("text").style.top = 430 + "px";
 				document.getElementById("leftImg").style.transform = "rotate(360deg)";
 				document.getElementById("leftImg").style.transition = "0.6s";
+				document.getElementById("boxz").style.top = "500px";
+				document.getElementById("boxx").style.top = "-500px";
 			}
         }  
         if (e.detail < 0) { //当滑轮向下滚动时
@@ -64,6 +70,8 @@ var scrollFunc = function(e){//当滚动条上下滚动时计算滚动量
 		document.getElementById("text").style.top = 800 + "px";
 		document.getElementById("leftImg").style.transform = "rotate(180deg)";
 		document.getElementById("leftImg").style.transition = "0.6s";
+		document.getElementById("boxz").style.top = "0px";
+		document.getElementById("boxx").style.top = "10px";
 	}
 	var scroll = document.getElementById("box");
 	scroll.scrollLeft = num;

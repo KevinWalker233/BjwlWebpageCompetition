@@ -3,10 +3,12 @@ var set_web = function(){//设置网页head和content
 	document.getElementById("content").style.height = document.documentElement.clientHeight*0.9+"px";
 }
 
+var time = 2000;//轮播图切换时间
+
 window.onload = function () {
 	set_web();
 	
-    let timer = setInterval(get_next, 2000)
+    let timer = setInterval(get_next, time)
     let sz = new Array();
     let szdiv = new Array()
     var cur_ul = document.getElementById("banner");
@@ -29,7 +31,7 @@ window.onload = function () {
             clearInterval(timer);
         }
         cur_li.onmouseleave = function () {
-            timer = setInterval(get_next, 2000)
+            timer = setInterval(get_next, time)
         }
 
         if (i != 5) {
@@ -45,6 +47,7 @@ window.onload = function () {
         let bottom_div = document.createElement("div");
         bottom_div.style.left = 105 * i + "px";
 		bottom_div.style.bottom = "120px";
+		bottom_div.style.cursor = "pointer";
 		bottom_div.name = i;
         bottom_div.id = i;
         szdiv.push(bottom_div)
@@ -64,6 +67,7 @@ window.onload = function () {
     pre_img.style.top = "-200px";
     pre_img.style.bottom = 0;
     pre_img.style.margin = "auto";
+	pre_img.style.cursor = "pointer";
     pre_img.style.zIndex = 100;
     cur_ul.appendChild(pre_img);
 
@@ -74,19 +78,20 @@ window.onload = function () {
     nex_img.style.top = "-200px";
     nex_img.style.bottom = 0;
     nex_img.style.margin = "auto";
+	nex_img.style.cursor = "pointer";
     nex_img.style.zIndex = 100;
     cur_ul.appendChild(nex_img);
 
-    pre_img.onclick = function () {
+    pre_img.onclick = function () {//向左翻页
         clearInterval(timer);
         get_pre();
-        timer = setInterval(get_next, 2000)
+        timer = setInterval(get_next, time)
     }
 
-    nex_img.onclick = function () {
+    nex_img.onclick = function () {//向右翻页
         clearInterval(timer);
         get_next();
-         timer = setInterval(get_next, 2000)
+         timer = setInterval(get_next, time)
     }
 
 
@@ -100,7 +105,7 @@ window.onload = function () {
     szdiv[0].style.background = "rgba(255,106,26,1)"
 	szdiv[0].style.width="65px";
 
-    for (let i = 0; i < szdiv.length; i++) {
+    for (let i = 0; i < szdiv.length; i++) {//轮播功能实现
         szdiv[i].onmouseenter = function () {
             clearInterval(timer);
             let len1 = sz[len - 1].id;
@@ -113,12 +118,12 @@ window.onload = function () {
                 while (dis--)
                     get_next()
             }
-            timer = setInterval(get_next,2000)
+            timer = setInterval(get_next,time)
         }
     }
 
 
-        function get_pre() {
+        function get_pre() {//向上翻页
             let give_up = sz[0];
             sz.shift()
             sz.push(give_up)
@@ -138,7 +143,7 @@ window.onload = function () {
 
         }
 
-        function get_next() {
+        function get_next() {//向下翻页
             let give_up = sz[len];
             sz.pop()
             sz.unshift(give_up)
@@ -159,7 +164,7 @@ window.onload = function () {
         }
 
 
-        function sync_szdiv() {
+        function sync_szdiv() {//设置点状轮播图
             for (let i = 0; i < szdiv.length; i++) {
                 if (szdiv[i].name == sz[len - 1].id){
                     szdiv[i].style.background = "rgba(255,106,26,1)";

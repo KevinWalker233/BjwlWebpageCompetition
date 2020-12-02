@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/test.css"/>
 		<script type="text/javascript" src="js/test.js"></script>
 		<script type="text/javascript" src="js/banner.js" ></script>
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> 
 	</head>
 	<body>
 		<div id="head">
@@ -18,16 +19,6 @@
 				<a href="img/wysjds.png" target=“_blank“>
 					<div class="headNumRight" id="head2">
 						<p style="position: relative;top: 30%;">网页设计</p>
-					</div>
-				</a>
-				<a href="img/bjwl.jpg" target=“_blank“>
-					<div class="headNumRight" id="head3">
-						<p style="position: relative;top: 30%;">宝鸡文理</p>
-					</div>
-				</a>
-				<a href="img/jsjxy.jpg" target=“_blank“>
-					<div class="headNumRight" id="head4">
-						<p style="position: relative;top: 30%;">宝大计算机</p>
 					</div>
 				</a>
 			</div>
@@ -49,6 +40,21 @@
 			<div id="box">
 				<div id="images">
 					<div id="leftImg"></div>
+					<img id="titileBox" src="./img/t4.png"/>
+					<div id="boxContent">
+						<div id="textBox">
+							<ul id="web">
+								<div id="line"></div>
+								<p class="headBox" id="weatherTitle">陕西省宝鸡市</p>
+								<br/>
+								<li class="webText"><a href="https://dy.163.com/article/FRL23D7K0550A3NK.html" target="_blank">麟游：小苹果带来大“钱景</a></li>
+								<li class="webText"><a href="https://baijiahao.baidu.com/s?id=1676357655600672433&wfr=spider&for=pc" target="_blank">“智慧农业”让宝鸡贫困户实现脱贫梦</a></li></li>
+								<li class="webText"><a href="http://news.cnwest.com/sxxw/a/2020/09/23/19120148.html" target="_blank">陕西宝鸡：农业玩起高科技</a></li>
+								<li class="webText"><a href="http://scitech.people.com.cn/n1/2020/1201/c1007-31950385.html" target="_blank">5G助力！智慧农业应用前景更广阔</a></li>
+								<li class="webText"><a href="https://baijiahao.baidu.com/s?id=1669257631252867315&wfr=spider&for=pc&qq-pf-to=pcqq.c2c" target="_blank">宝鸡扶风多措并举抓“三夏”抢收抢种获丰收</a></li>
+							</ul>
+						</div>
+					</div>
 					<div id="boxx">
 						<a href="./htmls/head4.html" target=“_blank“><div class="boxxxxx" id="box1"></div></a>
 						<a href="./htmls/head6.html" target=“_blank“><div class="boxxxxx" id="box3"></div></a>
@@ -66,13 +72,22 @@
 	</body>
 </html>
 <script>
+	
 	document.getElementById("leftImg").onclick = function(){
-	document.getElementById("box").style.left = 0+"px";
-	document.getElementById("texture").style.opacity = 0;
-	document.getElementById("text").style.opacity = 0;
-	document.getElementById("texture").style.left = -800 + "px";
-	document.getElementById("text").style.top = 800 + "px";
-	document.getElementById("leftImg").style.transform = "rotate(180deg)";
-	document.getElementById("leftImg").style.transition = "0.6s";
+		document.getElementById("box").style.left = 0+"px";
+		document.getElementById("texture").style.opacity = 0;
+		document.getElementById("text").style.opacity = 0;
+		document.getElementById("texture").style.left = -800 + "px";
+		document.getElementById("text").style.top = 800 + "px";
+		document.getElementById("leftImg").style.transform = "rotate(180deg)";
+		document.getElementById("leftImg").style.transition = "0.6s";
+		document.getElementById("boxz").style.top = "0px";
+		document.getElementById("boxx").style.top = "10px";
 	}
+	
+	document.getElementById("titileBox").onclick = function(){
+		document.getElementById("titileBox").src = "./img/t"+parseInt(Math.random()*5)+".png";
+	}
+	
+	document.getElementById("weatherTitle").innerText = returnCitySN.cname;
 </script>
